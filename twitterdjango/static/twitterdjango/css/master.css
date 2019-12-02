@@ -1,23 +1,32 @@
-
-
 :root {
   --text-light: rgb(255, 242, 242);
+  --text-color: rgb(141, 222, 158);
   --text-dark: black;
+  --bg-grey: rgb(211, 211, 211);
   --bg-light: white;
   --bg-dark: black;
 
-  --font-prime: 'Raleway', sans-sarif;
-  --font-second: 'Open Sans', sans-sarif;
+  --font-prime: "Montserrat", sans-sarif;
+  --font-second: "Open Sans", sans-sarif;
 }
 
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: var(--bg-light);
-  color:white;
+  font-family: var(--font-prime);
+  color: white;
   height: 100vh;
+}
+
+nav {
+  /* border: solid blue; */
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background: var(--bg-grey);
 }
 
 a,
@@ -35,7 +44,6 @@ header {
   height: 20vh;
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
-
 }
 
 form {
@@ -46,9 +54,17 @@ form {
   align-items: center;
   text-align: center;
   position: fixed;
-  width: 50%;
   top: 50%;
-  left: 50%;
+}
+
+title,
+.group-title,
+.new-group-title,
+.welcome-title,
+.login-title,
+.signup-title {
+  color: var(--text-color);
+  text-align: center;
 }
 
 .form-control {
@@ -59,13 +75,11 @@ form {
   align-items: center;
   text-align: center;
   position: fixed;
-  width: 50%;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--bg-soft);
   background-size: cover;
-  max-width: 100%;
+  max-width: 50%;
   max-height: 100%;
 }
 
@@ -79,12 +93,24 @@ form {
 }
 
 .btn-primary {
-display: flex;
-
+  display: flex;
+  background: var(--text-color);
 }
 
 .btn {
-  
+}
+
+.navbar {
+}
+
+.nav-container {
+  /* border: solid red; */
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.group-title {
+  position: center;
 }
 
 footer {
@@ -97,12 +123,14 @@ button {
   cursor: pointer;
 }
 
-
 /* ******** Hover ************ */
 input:hover {
   transition: background-color 2s;
   background: var(--bg-light);
 }
 
-
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .form-group {
+    display: unset;
+  }
+}

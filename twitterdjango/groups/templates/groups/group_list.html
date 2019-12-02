@@ -4,13 +4,12 @@
 <div class="col-md-4">
 	<div class="content">
 		{% if user.is_authenticated %}
-		<h2>
-			Welcome back
+		<h2 class='welcome-title'>Welcome back
 			<a href="{% url 'posts:for_user' username=user.username %}">@{{user.username }}</a>
 		</h2>
 
     {% endif %}
-			<h2>Groups</h2>
+			<h2 class='group-title'>Groups</h2>
 
 			<p>Check out all the groups, <br>Select a group with a shared interest!</p>
 	</div>
