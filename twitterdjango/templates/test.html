@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-  <h2 class='logged-in'>You are now logged in!</h2>
+  {% comment %} <h2 class='logged-in'>You are now logged in!</h2> {% endcomment %}
+  <h2><a class='go-to-groups' href="{% url 'groups:all'%}">Write Meow!</a></h2>
   <img class='cat-gif' src="https://media.giphy.com/media/13HBDT4QSTpveU/giphy.gif" alt="static/logo.png">
-  <h2><a class='logged-in' href="{% url 'groups:all'%}">Go to Groups</a></h2>
-
 
 </div>
 

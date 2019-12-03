@@ -1,6 +1,7 @@
 :root {
   --text-light: rgb(255, 242, 242);
   --text-color: rgb(141, 222, 158);
+  --text-color-two: rgb(228, 147, 60);
   --text-color-dark: rgb(63, 100, 71);
   --text-dark: black;
   --bg-grey: rgb(211, 211, 211);
@@ -16,11 +17,10 @@ html,
 body {
   margin: auto;
   padding: auto;
-  overflow: hidden;
   background-color: var(--bg-light);
   font-family: var(--font-prime);
   color: var(--text-dark);
-  height: 100%;
+  /* height: 100%; */
 }
 
 nav {
@@ -53,9 +53,20 @@ form {
   align-items: center;
   text-align: center;
   top: 50%;
+  height: 100%;
 }
 
-title,
+label {
+  font-size: 12px;
+}
+
+ul {
+  list-style-type: none;
+  color: green;
+  padding-right: 50px;
+
+}
+
 .group-title,
 .new-group-title,
 .welcome-title,
@@ -68,13 +79,19 @@ title,
 .welcome-back-title,
 .create-newpost-title,
 .group-message,
-.logged-in {
+.logged-in,
+.thanks-visiting {
   text-align: center;
+}
+
+.thanks-visiting {
+  color: var(--text-color-two);
 }
 
 .cat-gif {
   margin: auto;
   display: block;
+  padding-top: 10px;
 }
 
 .form-control {
@@ -85,16 +102,54 @@ title,
   align-items: center;
   text-align: center;
   position: relative;
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
   background: var(--bg-soft);
   background-size: cover;
   max-width: 70%;
   max-height: 100%;
 }
 
+.leave-group-btn {
+  border-color: var(--text-color);
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+.member-count {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+}
+
+.no-posts,
+.go-to-groups {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.group-name {
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: var(--text-color);
+}
+
 .form-text {
-  display: none;
+  /* display: none; */
+  /* border: solid; */
+  font-size: 10px;
+  list-style-type: none;
+  color: blue;
+}
+
+
+.text-muted {
+  /* border: solid; */
+  color: green !important;
 }
 
 textarea .form-control {
@@ -102,7 +157,6 @@ textarea .form-control {
   display: flex;
   border: solid;
 }
-
 
 #id_group {
   height: 40px;
@@ -130,10 +184,6 @@ textarea .form-control {
   /* text-align: center; */
   padding: 3px;
   width: 100%;
-
-}
-
-.navbar {
 }
 
 .nav-container {
@@ -160,6 +210,10 @@ button {
 input:hover {
   transition: background-color 2s;
   background: var(--bg-light);
+}
+
+.list-group-item:hover {
+  transform: scale(1.01);
 }
 
 a:hover {
