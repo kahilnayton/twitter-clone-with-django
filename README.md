@@ -1,4 +1,4 @@
-# twitter-clone-with-django
+# Write Meow!
 
 ## Stack 
 - Python 
