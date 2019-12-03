@@ -17,7 +17,7 @@ It's like twitter, for cats
 
 ### Sneak peak
 
-```
+``` jsx
 <div class="media">
 	<h3 class="mr-5"><a href="{% url 'posts:for_user' username=post.user.username %}">@{{ post.user.username }}</a></h3>
 
