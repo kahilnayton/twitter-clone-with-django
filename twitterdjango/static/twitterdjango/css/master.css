@@ -1,9 +1,11 @@
 :root {
   --text-light: rgb(255, 242, 242);
   --text-color: rgb(141, 222, 158);
+  --text-color-dark: rgb(63, 100, 71);
   --text-dark: black;
   --bg-grey: rgb(211, 211, 211);
   --bg-light: white;
+  --bg-color: rgb(132, 208, 149);
   --bg-dark: black;
 
   --font-prime: "Montserrat", sans-sarif;
@@ -12,13 +14,13 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   overflow: hidden;
   background-color: var(--bg-light);
   font-family: var(--font-prime);
-  color: white;
-  height: 100vh;
+  color: var(--text-dark);
+  height: 100%;
 }
 
 nav {
@@ -31,6 +33,7 @@ nav {
 
 a,
 h1,
+p,
 h2,
 h3,
 h4,
@@ -40,20 +43,15 @@ h5 {
   color: var(--text-dark);
 }
 
-header {
-  height: 20vh;
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
-}
 
 form {
   margin: auto;
   border-radius: 30px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: fixed;
   top: 50%;
 }
 
@@ -67,6 +65,18 @@ title,
   text-align: center;
 }
 
+.welcome-back-title,
+.create-newpost-title,
+.group-message,
+.logged-in {
+  text-align: center;
+}
+
+.cat-gif {
+  margin: auto;
+  display: block;
+}
+
 .form-control {
   margin: auto;
   border-radius: 30px;
@@ -74,30 +84,53 @@ title,
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   background: var(--bg-soft);
   background-size: cover;
-  max-width: 50%;
+  max-width: 70%;
   max-height: 100%;
 }
 
+.form-text {
+  display: none;
+}
+
+textarea .form-control {
+  margin: auto;
+  display: flex;
+  border: solid;
+}
+
+
 #id_group {
   height: 40px;
-  width: 30%;
+  /* width: 30%; */
   top: 77%;
   margin: auto;
   flex-direction: column;
   color: var(--text-dark);
 }
 
+.logo {
+  object-fit: cover;
+  width: 70px;
+}
+
 .btn-primary {
-  display: flex;
   background: var(--text-color);
 }
 
-.btn {
+.btn-warning {
+  border-color: var(--bg-color);
+  background: var(--bg-grey);
+  display: block;
+  margin: auto;
+  /* text-align: center; */
+  padding: 3px;
+  width: 100%;
+
 }
 
 .navbar {
@@ -129,8 +162,22 @@ input:hover {
   background: var(--bg-light);
 }
 
+a:hover {
+  transform: scale(1.06);
+}
+
+.btn-primary:hover {
+  background: var(--bg-color)
+}
+
+a:hover {
+  color: var(--text-color-dark)
+}
+
+.btn-warning:hover {
+  background: var(--bg-light)
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .form-group {
-    display: unset;
-  }
+ 
 }

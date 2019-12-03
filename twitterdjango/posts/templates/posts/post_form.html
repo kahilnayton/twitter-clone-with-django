@@ -3,7 +3,7 @@
 {% load bootstrap4 %}
 
 {% block post_content %}
-<h4>Create New Post</h4>
+<h4 class='create-newpost-title'>Create New Post</h4>
 <form method="POST" action="{% url 'posts:create' %}" id="postForm">
 	{% csrf_token %}
 	{% bootstrap_form form %}
