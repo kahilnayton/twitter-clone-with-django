@@ -25,7 +25,7 @@
 		{% for group in object_list %}
 		<a href="{% url 'groups:single' slug=group.slug %}"
 		class="list-group-item list-group-item-action flex-column align-items-start">
-			<h3 class="mb-1">{{ group.name }}</h3>
+			<h3 class="mb-1 group-list-title">{{ group.name }}</h3>
 			<p class="mb-1">{{ group.description_html|safe }}</p>
 			<div class="d-flex w-40 justify-content-between">
 				<small class="text-muted"><span class="badge badge-secondary">

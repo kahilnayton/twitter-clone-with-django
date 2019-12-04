@@ -2,6 +2,7 @@
   --text-light: rgb(255, 242, 242);
   --text-color: rgb(141, 222, 158);
   --text-color-two: rgb(228, 147, 60);
+  --text-color-three: rgb(227, 162, 93);
   --text-color-dark: rgb(63, 100, 71);
   --text-dark: black;
   --bg-grey: rgb(211, 211, 211);
@@ -15,12 +16,12 @@
 
 html,
 body {
-  margin: auto;
-  padding: auto;
+  margin: 0;
+  padding: 0;
   background-color: var(--bg-light);
   font-family: var(--font-prime);
   color: var(--text-dark);
-  /* height: 100%; */
+  height: 100vh;
 }
 
 nav {
@@ -43,7 +44,6 @@ h5 {
   color: var(--text-dark);
 }
 
-
 form {
   margin: auto;
   border-radius: 30px;
@@ -53,18 +53,39 @@ form {
   align-items: center;
   text-align: center;
   top: 50%;
-  height: 100%;
+  height: 100% !important;
 }
 
 label {
-  font-size: 12px;
+  font-size: 15px;
+  font-style: italic;
+  display: none;
 }
 
 ul {
   list-style-type: none;
   color: green;
   padding-right: 50px;
+}
 
+.footer {
+  background: var(--bg-grey);
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  align-content: flex-end;
+}
+
+form.form {
+  padding-bottom: 70px !important;
+}
+
+.github {
+  width: 40px;
+  align-content: flex-end;
+  opacity: 0.6;
 }
 
 .group-title,
@@ -74,6 +95,11 @@ ul {
 .signup-title {
   color: var(--text-color);
   text-align: center;
+  padding-bottom: 10px;
+}
+
+.group-title {
+  padding-top: 20px;
 }
 
 .welcome-back-title,
@@ -85,6 +111,10 @@ ul {
 }
 
 .thanks-visiting {
+  color: var(--text-color-two);
+}
+
+.group-list-title {
   color: var(--text-color-two);
 }
 
@@ -104,7 +134,7 @@ ul {
   position: relative;
   background: var(--bg-soft);
   background-size: cover;
-  max-width: 70%;
+  width: auto !important;
   max-height: 100%;
 }
 
@@ -131,6 +161,11 @@ ul {
   font-size: 15px;
 }
 
+.go-to-groups {
+  font-size: 20px;
+  color: var(--text-color-two);
+}
+
 .group-name {
   display: block;
   margin: auto;
@@ -145,7 +180,6 @@ ul {
   list-style-type: none;
   color: blue;
 }
-
 
 .text-muted {
   /* border: solid; */
@@ -212,6 +246,14 @@ input:hover {
   background: var(--bg-light);
 }
 
+.linkedin:hover, .github:hover, .github-link:hover {
+  transform: scale(1);
+}
+
+.go-to-groups:hover {
+  color: var(--text-color-three);
+}
+
 .list-group-item:hover {
   transform: scale(1.01);
 }
@@ -221,17 +263,16 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background: var(--bg-color)
+  background: var(--bg-color);
 }
 
 a:hover {
-  color: var(--text-color-dark)
+  color: var(--text-color-dark);
 }
 
 .btn-warning:hover {
-  background: var(--bg-light)
+  background: var(--bg-light);
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
- 
 }
